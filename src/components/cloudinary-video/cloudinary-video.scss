@@ -1,0 +1,27 @@
+cloudinary-video {
+  .cloudinary-video-item {
+    position: relative;
+  }
+
+  .cloudinary-video-item > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .cloudinary-video-item svg {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  .cloudinary-video-item svg:hover {
+    opacity: 0.9;
+  }
+
+  .cloudinary-video-item-active, .cloudinary-video-item-video {
+    display: block;
+  }
+}

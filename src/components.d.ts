@@ -6,6 +6,39 @@
 
 import '@stencil/router';
 
+import { CloudinaryVideo as CloudinaryVideo } from './components/cloudinary-video/cloudinary-video';
+
+interface HTMLCloudinaryVideoElement extends CloudinaryVideo, HTMLElement {
+}
+declare var HTMLCloudinaryVideoElement: {
+  prototype: HTMLCloudinaryVideoElement;
+  new (): HTMLCloudinaryVideoElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "cloudinary-video": HTMLCloudinaryVideoElement;
+  }
+  interface ElementTagNameMap {
+      "cloudinary-video": HTMLCloudinaryVideoElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "cloudinary-video": JSXElements.CloudinaryVideoAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface CloudinaryVideoAttributes extends HTMLAttributes {
+          mode?: string,
+          color?: string,
+        
+          account?: string,
+          width?: string,
+          height?: string,
+          alias?: string
+      }
+  }
+}
+
 import { MyName as MyName } from './components/my-name/my-name';
 
 interface HTMLMyNameElement extends MyName, HTMLElement {
@@ -28,9 +61,11 @@ declare global {
   }
   namespace JSXElements {
       export interface MyNameAttributes extends HTMLAttributes {
+          mode?: string,
+          color?: string,
         
-          first?: any,
-          last?: any
+          first?: string,
+          last?: string
       }
   }
 }
