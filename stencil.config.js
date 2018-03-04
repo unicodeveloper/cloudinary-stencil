@@ -1,9 +1,14 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
   bundles: [
-    { components: ['my-name'] }
+    { components: ['cloudinary-video'] }
   ],
   collections: [
     { name: '@stencil/router' }
+  ],
+  plugins: [
+    sass()
   ]
 };
 
